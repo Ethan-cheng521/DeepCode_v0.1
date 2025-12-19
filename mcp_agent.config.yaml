@@ -55,35 +55,39 @@ mcp:
 
 
     code-implementation:
-      # For Windows, use python3 or py -3 if python doesn't work
+      # Windows: use "python" (default) or "py" if python doesn't work
+      # Linux/Mac: use "python3"
       args:
       - tools/code_implementation_server.py
-      command: python3
+      command: python
       description: Paper code reproduction tool server - provides file operations,
         code execution, search and other functions
       env:
         PYTHONPATH: .
     code-reference-indexer:
-      # For Windows, use python3 or py -3 if python doesn't work
+      # Windows: use "python" (default) or "py" if python doesn't work
+      # Linux/Mac: use "python3"
       args:
       - tools/code_reference_indexer.py
-      command: python3
+      command: python
       description: Code reference indexer server - Provides intelligent code reference
         search from indexed repositories
       env:
         PYTHONPATH: .
     command-executor:
-      # For Windows, use python3 or py -3 if python doesn't work
+      # Windows: use "python" (default) or "py" if python doesn't work
+      # Linux/Mac: use "python3"
       args:
       - tools/command_executor.py
-      command: python3
+      command: python
       env:
         PYTHONPATH: .
     document-segmentation:
-      # For Windows, use python3 or py -3 if python doesn't work
+      # Windows: use "python" (default) or "py" if python doesn't work
+      # Linux/Mac: use "python3"
       args:
       - tools/document_segmentation_server.py
-      command: python3
+      command: python
       description: Document segmentation server - Provides intelligent document analysis
         and segmented reading to optimize token usage
       env:
@@ -93,17 +97,19 @@ mcp:
       - mcp-server-fetch
       command: uvx
     file-downloader:
-      # For Windows, use python3 or py -3 if python doesn't work
+      # Windows: use "python" (default) or "py" if python doesn't work
+      # Linux/Mac: use "python3"
       args:
       - tools/pdf_downloader.py
-      command: python3
+      command: python
       env:
         PYTHONPATH: .
     github-downloader:
-      # For Windows, use python3 or py -3 if python doesn't work
+      # Windows: use "python" (default) or "py" if python doesn't work
+      # Linux/Mac: use "python3"
       args:
       - tools/git_command.py
-      command: python3
+      command: python
       env:
         PYTHONPATH: .
 # LLM Provider Priority (选择使用哪个LLM / Choose which LLM to use)
